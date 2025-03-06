@@ -66,7 +66,7 @@ const Sidebar = () => {
               <span className="ml-4">New Chat</span>
             </Link>
             <Link
-              href="/history"
+              href={'/history'}
               className="flex items-center text-white hover:bg-indigo-800 p-2 rounded transition-colors"
             >
               <svg
