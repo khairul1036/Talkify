@@ -21,7 +21,10 @@ const Sidebar = () => {
               <Link href="/" className="text-4xl text-white">
                 Talkify
               </Link>
-              <button onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
+              <button
+                className="block md:hidden"
+                onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -44,21 +47,43 @@ const Sidebar = () => {
           <nav className="flex flex-col space-y-4">
             <Link
               href="/"
-              className="text-white hover:bg-indigo-800 p-2 rounded transition-colors"
+              className="flex items-center text-white hover:bg-indigo-800 p-2 rounded transition-colors"
             >
-              Home
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                className="w-6 h-6 text-white"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M14.828 2.828a4 4 0 015.656 5.656l-10.6 10.6a2 2 0 01-.659.394L4 18.104a1 1 0 01-.463-.337l-1.388-1.388a1 1 0 01-.337-.463l2.329-4.184a2 2 0 01.394-.659l10.6-10.6a4 4 0 010 5.656z"
+                />
+              </svg>
+              <span className="ml-4">New Chat</span>
             </Link>
             <Link
-              href="/about"
-              className="text-white hover:bg-indigo-800 p-2 rounded transition-colors"
+              href="/history"
+              className="flex items-center text-white hover:bg-indigo-800 p-2 rounded transition-colors"
             >
-              About
-            </Link>
-            <Link
-              href="/contact"
-              className="text-white hover:bg-indigo-800 p-2 rounded transition-colors"
-            >
-              Contact
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                className="w-6 h-6 text-white"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M12 6v6l4 2M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              <span className="ml-4">History</span>
             </Link>
           </nav>
         </div>
@@ -66,7 +91,7 @@ const Sidebar = () => {
 
       {/* Mobile Sidebar Button (Hamburger) */}
       <button
-        className="md:hidden absolute top-6 left-1"
+        className="md:hidden top-6 left-1 z-40 fixed"
         onClick={() => setIsSidebarOpen(!isSidebarOpen)}
       >
         <svg

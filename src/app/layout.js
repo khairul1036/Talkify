@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
             {/* Navbar */}
             <Navbar />
             {/* Dynamic content from children */}
-            <main>{children}</main>
+            <main className="mx-5 mt-5 md:ml-80 md:mr-20">{children}</main>
           </div>
         </div>
       </body>
